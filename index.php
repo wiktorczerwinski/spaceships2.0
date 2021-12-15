@@ -12,7 +12,12 @@
 <body>
 <?php
     $ship = new Spaceship();
-    echo $ship->ammo;
+    echo $ship->ammo . "<br>";
+    $ship2 = new Spaceship(50,50,50);
+    echo $ship2->ammo;
+    
+    $dmg = $ship1->Shoot();
+    $ship2->Hit($dmg);
 ?>
 </body>
 </html>
