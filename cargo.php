@@ -1,36 +1,27 @@
 <?php
+//load
+//unload
 
-class Spaceship{
+class Cargo{
     // Properties
     public bool $isAlive;
     private int $fuel;
     public int $hitPoints;
-    public int $ammo;
+    public int $load;
+    public int $unload;
 
     // Constructor
-    public function __construct($ammo = 100,
+    public function __construct(
                                 $fuel = 100,
                                 $hitPoints = 100,
                                 $isAlive = true)
     {
-        $this->ammo = $ammo;
         $this->fuel = $fuel;
         $this->hitPoints = $hitPoints;
         $this->isAlive = true;
     }
     // Methods | functions
 
-    // Shoot
-        public function Shoot() : int{
-            $shot = 5;
-            $damage = 2;
-            if ($this->ammo - $shot >= 0){
-                    $this->ammo -= $shot;
-                    return ($shot * $damage);
-                }else {
-                    return 0;
-                }
-            }
     // Hit
     public function Hit($damage){
         if($this->hitPoints - $damage = 0){

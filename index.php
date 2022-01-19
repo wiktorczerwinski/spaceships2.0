@@ -14,10 +14,13 @@
     $ship = new Spaceship();
     echo $ship->ammo . "<br>";
     $ship2 = new Spaceship(50,50,50);
-    echo $ship2->ammo;
-    
-    $dmg = $ship1->Shoot();
+    echo $ship2->ammo . "<br>";
+
+    $dmg = $ship->Shoot();
     $ship2->Hit($dmg);
+
+    echo $ship->ammo . "<br>";
+    echo $ship2->hitPoints . "<br>";
 ?>
 </body>
 </html>
